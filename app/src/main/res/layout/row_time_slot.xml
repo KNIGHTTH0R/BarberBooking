@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/timeSlotCardView"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/timeSlotTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="9:00 - 9:30"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/bellerose"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/availabilityTv"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:layout_marginTop="4dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/availabilityTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Available"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/bellerose"
+                app:layout_constraintTop_toBottomOf="@id/timeSlotTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:layout_marginTop="4dp" android:layout_marginBottom="4dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

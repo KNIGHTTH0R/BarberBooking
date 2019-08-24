@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/barberCardView"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="4dp"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/barberIv"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:src="@drawable/ic_account"
+                android:tint="@color/colorBlack"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/barberTv"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:layout_marginTop="4dp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/barberTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="David"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/bellerose"
+                app:layout_constraintTop_toBottomOf="@id/barberIv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/barberRating"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:layout_marginTop="4dp"/>
+
+        <RatingBar
+                android:id="@+id/barberRating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/barberTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                android:rating="1"
+                android:max="5"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

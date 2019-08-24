@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/homeBackground"
+        tools:context=".ui.home.fragment.dashboard.DashboardFragment"
+>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layoutUserInformation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/colorBtn"
+            android:padding="8dp"
+            android:weightSum="4"
+            android:visibility="gone"
+            tools:visibility="visible"
+    >
+
+        <androidx.appcompat.widget.AppCompatImageView
+                app:srcCompat="@drawable/ic_account"
+                android:layout_width="60dp"
+                android:layout_height="60dp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/usernameTv"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="22sp"
+                    android:text="Mohamed Ibrahim"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/container"
+            android:orientation="horizontal"
+            android:weightSum="4"
+            android:padding="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/layoutUserInformation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    >
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/bookingCardView"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/colorWhite"
+        >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        app:srcCompat="@drawable/ic_event"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bellerose"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/fontCard"
+                        android:text="Booking"
+                />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/cartCardView"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/colorWhite"
+        >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        app:srcCompat="@drawable/ic_shopping_cart"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bellerose"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/fontCard"
+                        android:text="Cart"
+                />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/historyCardView"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/colorWhite"
+        >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        app:srcCompat="@drawable/ic_history"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bellerose"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/fontCard"
+                        android:text="History"
+                />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/notificationCardView"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="@color/colorWhite"
+        >
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        app:srcCompat="@drawable/ic_notifications"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/bellerose"
+                        android:layout_gravity="center_horizontal"
+                        android:textSize="@dimen/fontCard"
+                        android:text="Notification"
+                />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <ss.com.bannerslider.Slider
+            android:id="@+id/bannerSlider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lookBookTv"
+            app:layout_constraintTop_toBottomOf="@id/bannerSlider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Look Book"
+            android:fontFamily="@font/bellerose"
+            android:textSize="20sp"
+    />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lookBookRv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/lookBookTv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="8dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
